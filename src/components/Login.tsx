@@ -16,7 +16,7 @@ const initialState: AuthState = {
 
 type LoginPayload = {
     username: string,
-    nombre: string
+    nombre: string,
 }
 
 type AuthAction =
@@ -30,7 +30,7 @@ const authReducer = (state: AuthState, action: AuthAction): AuthState => {
                 validando: false,
                 token: null,
                 nombre: '',
-                username: ''
+                username: '',
             }
         case 'login':
             const { nombre, username } = action.payload;
